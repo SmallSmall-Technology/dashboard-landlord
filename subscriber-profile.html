@@ -6,9 +6,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Favicon link -->
-  <link rel="icon" type="image/png" href="./assets/images/rss-favicon.png">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./assets/css/bootstrap-css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
@@ -32,10 +29,10 @@
   <!-- custom CSS -->
   <link rel="stylesheet" href="./assets/css/custom-css/header.css" />
   <link rel="stylesheet" href="./assets/css/custom-css/footer.css" />
-  <link rel="stylesheet" href="./assets/css/custom-css/index.css" />
+  <link rel="stylesheet" href="./assets/css/custom-css/booking.css" />
 
 
-  <title>Dashboard Home</title>
+  <title>Subscriber | profile</title>
 </head>
 
 <body>
@@ -72,7 +69,7 @@
               </div>
             </a>
           </li>
-          <li class="nav-item d-flex align-items-center dashboard-active mr-4">
+          <li class="nav-item d-flex align-items-center  mr-4">
             <div class="menu-text">
               <a href="index.html" class=" text-dark" style="text-decoration: none;">Dashboard</a>
             </div>
@@ -97,7 +94,7 @@
               </div>
             </a>
           </li>
-          <li class="nav-item d-flex align-items-center mr-4">
+          <li class="nav-item d-flex align-items-center dashboard-active mr-4">
             <div class="menu-text">
               <a href="my-property.html" class=" text-dark" style="text-decoration: none;">My property</a>
             </div>
@@ -181,7 +178,7 @@
       </div>
 
       <div id="my-nav" class="collapse navbar-collapse mobile-menu-collapse pl-0 pt-4">
-        <div class="mb-4 pl-2 dashboard-active">
+        <div class="mb-4 pl-2 ">
           <p>
             <a href="index.html" class=" text-dark" style="text-decoration: none;">
               <img class="img-fluid" src="assets/images/dashboard-icon.svg" alt="">
@@ -199,7 +196,7 @@
           </p>
         </div>
 
-        <div class="mb-4 pl-2">
+        <div class="mb-4 pl-2 dashboard-active">
           <p>
             <a href="booking.html" class=" text-dark" style="text-decoration: none;">
               <img class="img-fluid" src="assets/images/myProperty-icon.svg" alt="">
@@ -230,10 +227,151 @@
 
   </header>
 
+  <!-- Sub menu for property section starts here -->
+  <div class="container-fluid d-md-flex d-none nav-bottom-color sub-menu ">
+    <div class="sub-nav d-flex flex-wrap">
+      <a class="text-decoration-none secondary-text-color mr-4 py-3 " href="my-property.html">
+        <div class="sub-menu-link  ">
+          Property
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color mr-4 py-3 sub-menu--dashboard-active" href="subscriber.html">
+        <div class="sub-menu-link  ">
+          Subscriber
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color mr-4 py-3" href="repair.html">
+        <div class="sub-menu-link  ">
+          Repair
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color mr-4 py-3" href="property-agreement.html">
+        <div class="sub-menu-link  ">
+          Property Agreement
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color mr-4 py-3" href="transactions.html">
+        <div class="sub-menu-link  ">
+          Transactions
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sub menu mobile view for property section starts here -->
+  <div class="container-fluid d-block d-md-none nav-bottom-color sub-menu">
+    <div class="sub-nav d-flex justify-content-between ">
+      <a class="text-decoration-none secondary-text-color py-3  " href="my-property.html">
+        <div class="sub-menu-link  ">
+          Property
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color py-3 sub-menu--dashboard-active" href="subscriber.html">
+        <div class="sub-menu-link  ">
+          Subscriber
+        </div>
+      </a>
+      <a class="text-decoration-none secondary-text-color py-3" href="repair.html">
+        <div class="sub-menu-link  ">
+          Repair
+        </div>
+      </a>
+      <div class="dropdown align-self-center py-3 ">
+        <a class="text-decoration-none secondary-text-color" href="#" role="button" data-toggle="dropdown"
+          aria-expanded="false">
+          More
+          <i class="fa-solid fa-caret-down"></i>
+        </a>
+
+        <div class="dropdown-menu custom-dropdown-menu primary-background border-0 ">
+          <a class="dropdown-item secondary-text-color custom-dropdown-active" href="property-rating.html">Property
+            Agreement</a>
+          <a class="dropdown-item secondary-text-color" href="transactions.html">Transactions</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 
+
+  <!-- Main body content starts here -->
   <main class="container">
+    <div class="row mt-5">
+      <div class="col-12 d-flex justify-content-between">
+        <div style="color: #7D8993; font-size: 13px;" class="font-weight-lighter">
+          <span>Rentsmallsmall</span>
+          <span>></span>
+          <span>Dashboard</span>
+          <span>></span>
+          <span>Property</span>
+          <span>></span>
+          <span>2 br Maisonette B2 Olivia Court Lekki</span>
+        </div>
 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-5">
+        <p style="font-size: 22px;">Subscriber Profile</p>
+      </div>
+      <div class="col-12 sub-nav">
+        <nav class="nav">
+          <li class="nav-item mr-3 ">
+            <a class="nav-link primary-text-color  sub-menu--dashboard-active  px-0" id="currentBookingBtn" href="#"
+              role="button">Profile</a>
+          </li>
+        </nav>
+      </div>
+
+      <!-- Subscriber profile  -->
+      <div class="col-12 mt-5 collapse show " id="currentBooking">
+        <div class="primary-background p-md-5 p-3">
+          <div class="row">
+            <div class="col-12">
+              <p>Subscriber name</p>
+              <h3 class="address-title">Tara Bello</h3>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class=" col-12 ">
+              <p class="font-weight-light custom-font-size-14">Property</p>
+              <p class="custom-font-size-26">2 br Maisonette B2 Olivia Court Lekki</p>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-md-2 col-6 mb-3 ">
+              <p class="font-weight-light custom-font-size-14">Genger</p>
+              <p class="custom-font-size-26">Female</p>
+            </div>
+            <div class="col-md-2 col-6 mb-3 ">
+              <p class="font-weight-light">Marital status</p>
+              <p class="custom-font-size-26">Single</p>
+            </div>
+            <div class="col-md-2 col-6 mb-3 ">
+              <p class="font-weight-light custom-font-size-14">Occupation</p>
+              <p class="custom-font-size-26">Doctor</p>
+            </div>
+            <div class="col-md-3 col-6 mb-3 ">
+              <p class="font-weight-light custom-font-size-14">DOB</p>
+              <p class="custom-font-size-26">15 May, 1993</p>
+            </div>
+            <div class="col-md-3 col-12 mb-3 ">
+              <p class="font-weight-light custom-font-size-14">Contract start / Move-in date</p>
+              <p class="custom-font-size-26">15 May, 2023</p>
+            </div>
+          </div>
+          <div class="row my-md-3">
+            <div class="col-12 ">
+              <p class="font-weight-light custom-font-size-14">Company</p>
+              <p class="custom-font-size-26">Evercare Hospital Lekki, Lagos</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
   </main>
 
@@ -265,6 +403,78 @@
   <script src="./assets/js/bootstrap-js/bootstrap.min.js"
     integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
     crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#currentBookingBtn").click(function () {
+        $("#currentBooking").addClass("show");
+        $("#tenantHistory").removeClass("show");
+        $("#inspections").removeClass("show");
+        $("#payoutHistory").removeClass("show");
+
+        $("#tenantHistoryBtn").addClass("secondary-text-color")
+        $("#tenantHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#inspectionsBtn").addClass("secondary-text-color")
+        $("#inspectionsBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#payoutHistoryBtn").addClass("secondary-text-color")
+        $("#payoutHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#currentBookingBtn").addClass("primary-text-color sub-menu--dashboard-active")
+        $("#currentBookingBtn").removeClass("secondary-text-color")
+
+      });
+
+      $("#tenantHistoryBtn").click(function () {
+        $("#tenantHistory").addClass("show");
+        $("#currentBooking").removeClass("show");
+        $("#inspections").removeClass("show");
+        $("#payoutHistory").removeClass("show");
+
+        $("#tenantHistoryBtn").addClass("primary-text-color sub-menu--dashboard-active")
+        $("#tenantHistoryBtn").removeClass("secondary-text-color")
+        $("#currentBookingBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#currentBookingBtn").addClass("secondary-text-color")
+        $("#payoutHistoryBtn").addClass("secondary-text-color")
+        $("#payoutHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#inspectionsBtn").addClass("secondary-text-color")
+        $("#inspectionsBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+
+      });
+
+      $("#inspectionsBtn").click(function () {
+        $("#inspections").addClass("show");
+        $("#currentBooking").removeClass("show");
+        $("#tenantHistory").removeClass("show");
+        $("#payoutHistory").removeClass("show");
+
+        $("#tenantHistoryBtn").addClass("secondary-text-color")
+        $("#tenantHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#currentBookingBtn").addClass("secondary-text-color")
+        $("#currentBookingBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#payoutHistoryBtn").addClass("secondary-text-color")
+        $("#payoutHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#inspectionsBtn").removeClass("secondary-text-color")
+        $("#inspectionsBtn").addClass("primary-text-color sub-menu--dashboard-active")
+      });
+
+      $("#payoutHistoryBtn").click(function () {
+        $("#payoutHistory").addClass("show");
+        $("#currentBooking").removeClass("show");
+        $("#tenantHistory").removeClass("show");
+        $("#inspections").removeClass("show");
+
+        $("#tenantHistoryBtn").addClass("secondary-text-color")
+        $("#tenantHistoryBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#currentBookingBtn").addClass("secondary-text-color")
+        $("#currentBookingBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+        $("#inspectionsBtn").addClass("secondary-text-color")
+        $("#inspectionsBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+
+        $("#payoutHistoryBtn").removeClass("secondary-text-color")
+        $("#payoutHistoryBtn").addClass("primary-text-color sub-menu--dashboard-active")
+      });
+
+    });
+  </script>
 
 
 </body>
