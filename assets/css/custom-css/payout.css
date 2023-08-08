@@ -1,5 +1,5 @@
 .current-booking {
-  background: #F6F7F8;
+  background: #f6f7f8;
   border-radius: 10px;
   padding: 4em;
 }
@@ -8,15 +8,13 @@
   background: #222224;
   border-radius: 4px;
   min-width: 211px;
-  color: #ffffff
-    /* padding: 2em; */
+  color: #ffffff;
+  /* padding: 2em; */
 }
 
-
 .wallet-btn {
-  background: #EDEDEF;
+  background: #ededef;
   border-radius: 4px;
-
 }
 
 .payout {
@@ -31,7 +29,6 @@
   background-size: 100% 100%;
 }
 
-
 .certificate-item {
   max-width: 33.3%;
 }
@@ -40,7 +37,13 @@
   border-right: 1px solid #222224 !important;
 }
 
-
+.filter-btn {
+  background: #9bd7f6;
+  border-radius: 5px;
+  color: #ffffff;
+  min-height: 3.6em;
+  /* padding */
+}
 
 /*****MEDIA QUERY****/
 
@@ -59,24 +62,28 @@
   }
 
   .certificate-item:not(:last-child, :nth-child(3n)) {
-    border-right: 0px !important
+    border-right: 0px !important;
   }
-
-
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 576px) {
+}
 
 /* Medium devices (tablets, 768px and up)*/
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+}
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+}
 
 /* Large devices (desktops, 992px and up)*/
-@media screen and (992px <=width <=1024px) {}
+@media screen and (992px <=width <=1024px) {
+}
 
 /* Extra large devices (large desktops, 1200px and up)*/
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+}

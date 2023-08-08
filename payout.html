@@ -103,7 +103,7 @@
             </div>
           </li>
           <li class="nav-item d-flex align-items-center">
-            <a class="nav-link p-0" href="wallet.html" tabindex="-1" aria-disabled="true">
+            <a class="nav-link p-0" href="payout.html" tabindex="-1" aria-disabled="true">
               <div class="menu-logo mr-2">
                 <img class="img-fluid" src="assets/images/payout-icon.svg" alt="">
               </div>
@@ -323,7 +323,7 @@
       </div>
 
       <!-- Payout -->
-      <div class="col-12 mt-5 collapse show " id="currentBooking">
+      <div class="col-12 mt-5 collapse  show" id="currentBooking">
 
         <!-- payout section -->
         <div class="secondary-background payout p-5 mb-4">
@@ -411,47 +411,56 @@
 
       </div>
 
-      <!-- Pay-in -->
+      <!--Filer payout -->
       <div class="col-12 mt-5 collapse " id="checklist">
 
-        <!-- payout section -->
-        <div class="secondary-background payout p-5 mb-4">
-          <div class="row mb-4">
-            <div class="col-12">
-              <p style="font-size: 32px;">Pay-in</p>
-            </div>
-          </div>
-          <div class="certificate-container d-flex flex-wrap">
-            <div class="certificate-item  pr-md-5 mr-md-5 mb-md-5">
-              <p style="font-size: 12px;">Total Paid in share</p>
-              <div class="d-flex">
-                <P style="font-size: 25px" class="mr-3">&#8358;2,000,000</P>
+        <div class="primary-background payout p-5 mb-4">
+          <form action="">
 
+            <div class="row mb-4">
+              <div class="col-12 mb-5">
+                <p style="font-size: 32px;">Filter Payout</p>
               </div>
-            </div>
-            <div class="certificate-item d-flex  pr-md-5 mr-md-5 mb-md-5">
-              <div>
-                <p style="font-size: 12px;">Upcoming Pay-in</p>
-                <P style="font-size: 25px" class="mr-3">&#8358;220,000</P>
-              </div>
-
-              <div class="d-flex">
-                <div class="d-flex flex-column">
-                  <!-- <p class="font-weight-light" style="font-size: 12px;">Pending</p> -->
-                  <p class="font-weight-light" style="font-size: 13px;">Feb 12, 2023</p>
-                  <button type="button" class="btn default-background" data-toggle="modal" data-target="#">Pay
-                    now</button>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-md-4 col-12 mb-3">
+                    <label for="">Property</label>
+                    <div class="ss-custom-select">
+                      <select name="" id="">
+                        <option value="">Choose property</option>
+                        <option value="">Choose property</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col-12 ">
+                    <div class="row">
+                      <div class="col-md-6 col-12 mb-3">
+                        <label for="">Date(from)</label>
+                        <div class="ss-custom-input">
+                          <input type="date" value="From" placeholder="From">
+                        </div>
+                      </div>
+                      <span></span>
+                      <div class="col-md-6 col-12">
+                        <label for="">Date(To)</label>
+                        <div class="ss-custom-input">
+                          <input type="date" value="From" placeholder="From">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-12 d-flex align-items-end mt-md-0 my-3">
+                    <button class=" btn filter-btn px-5" id="filter-btn">Filter </button>
+                  </div>
                 </div>
               </div>
             </div>
-
-
-          </div>
+          </form>
 
         </div>
 
         <!-- payout history -->
-        <div class="primary-background p-md-5 p-2">
+        <div class="primary-background p-md-5 p-2 d-none" id="payoutHistory">
           <div class="mb-3">
             <p>Payout History</p>
           </div>
@@ -594,18 +603,18 @@
 
   <script>
     $(document).ready(function () {
-      const loadHistory = function () {
-        $("#history").addClass("show");
-        $("#currentBooking").removeClass("show");
-        $("#checklist").removeClass("show");
+      // const loadHistory = function () {
+      //   $("#history").addClass("show");
+      //   $("#currentBooking").removeClass("show");
+      //   $("#checklist").removeClass("show");
 
-        $("#checklistBtn").addClass("secondary-text-color")
-        $("#checklistBtn").removeClass("primary-text-color sub-menu--dashboard-active")
-        $("#currentBookingBtn").addClass("secondary-text-color")
-        $("#currentBookingBtn").removeClass("primary-text-color sub-menu--dashboard-active")
-        $("#historyBtn").removeClass("secondary-text-color")
-        $("#historyBtn").addClass("primary-text-color sub-menu--dashboard-active")
-      }
+      //   $("#checklistBtn").addClass("secondary-text-color")
+      //   $("#checklistBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+      //   $("#currentBookingBtn").addClass("secondary-text-color")
+      //   $("#currentBookingBtn").removeClass("primary-text-color sub-menu--dashboard-active")
+      //   $("#historyBtn").removeClass("secondary-text-color")
+      //   $("#historyBtn").addClass("primary-text-color sub-menu--dashboard-active")
+      // }
 
 
       $("#currentBookingBtn").click(function () {
@@ -633,9 +642,16 @@
 
       });
 
-      $("#historyBtn").click(loadHistory);
+      // $("#historyBtn").click(loadHistory);
 
-      $(".viewTransaction").click(loadHistory);
+      // $(".viewTransaction").click(loadHistory);
+
+      // toggle the payout history when filter button is clicked
+      $("#filter-btn").click(function (e) {
+        e.preventDefault();
+        $("#payoutHistory").toggleClass("d-none");
+        console.log(e.target);
+      })
 
     });
   </script>

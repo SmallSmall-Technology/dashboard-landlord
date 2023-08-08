@@ -29,6 +29,9 @@
 .custom-font-size-30 {
   font-size: 30px;
 }
+.custom-font-size-30 {
+  font-size: 30px;
+}
 
 /* END CUSTOM FONT SIZES */
 
@@ -36,6 +39,11 @@
 
 .success-color {
   color: #03bc15;
+}
+
+.success-color-bg {
+  background-color: #03bc15;
+  color: #ffffff;
 }
 
 .danger-color {
@@ -48,6 +56,35 @@
 
 /* END CUSTOM FONT COLORS */
 
+/* CUSTOM FORMS INPUT */
+.ss-custom-select {
+  border-radius: 7px;
+  border: 2px solid #f3f6f8;
+  background: #fff;
+  padding: 1em 1.8em;
+}
+
+.ss-custom-select select {
+  border: none;
+  width: 100%;
+  font-size: 14px;
+}
+.ss-custom-input {
+  border-radius: 7px;
+  border: 2px solid #f3f6f8;
+  background: #fff;
+  padding: 1em 1.8em;
+}
+.ss-custom-input input {
+  border: none;
+  width: 100%;
+  /* font-size: 14px; */
+}
+
+/* .ss-custom-select select::after {
+  content: "";
+} */
+
 .primary-background {
   background: #f3f6f8;
   border-radius: 10px;
@@ -57,6 +94,11 @@
 .secondary-background {
   background: #9bd7f6;
   border-radius: 10px;
+  color: #ffffff;
+}
+
+.secondary-background-btn {
+  background: #9bd7f6;
   color: #ffffff;
 }
 
